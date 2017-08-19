@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private final Activity activity=this;
     WebView myWebView =null;
     Button button =null;
-    Handler mHandler=null;
     boolean ischange=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
             //myWebView.setWebViewClient(new WebViewClient());
         }
         Log.d("Web Activity", "on create");
-        mHandler = new Handler();
     }
 
     public boolean isConnected(Context context)
